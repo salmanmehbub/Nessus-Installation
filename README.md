@@ -153,7 +153,7 @@ Click on <b>Continue</b> to move forward.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_choose_product.png" width="800">
+  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_choose_product.png" style="width:50%;>
 </p>
 
 <p>
