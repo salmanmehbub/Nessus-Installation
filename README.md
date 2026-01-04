@@ -162,7 +162,7 @@ For the free version, choose <b>Nessus Essentials</b>.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_register.png" width="800">
+  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_register.png" style="width:50%;>
 </p>
 
 <hr>
@@ -175,7 +175,7 @@ On the next screen, provide your name and email address and click on
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_register_user.png" width="800">
+  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_register_user.png" style="width:50%;>
 </p>
 
 <p>
@@ -185,7 +185,7 @@ Click on <b>Continue</b>.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_activation.png" width="800">
+  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_activation.png" style="width:50%;>
 </p>
 
 <p>
@@ -194,7 +194,7 @@ which will be used to log in to Nessus.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_administrator_account.png" width="800">
+  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_administrator_account.png" style="width:50%;>
 </p>
 
 <hr>
@@ -207,7 +207,7 @@ This process may take some time.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_plugin_setup.png" width="800">
+  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_plugin_setup.png" style="width:50%;>
 </p>
 
 <p>
@@ -220,7 +220,7 @@ to complete. So grab a cup of coffee and relax while it works its magic.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_plugin_setup_01.png" width="800">
+  <img src="https://raw.githubusercontent.com/salmanmehbub/Nessus-Installation/refs/heads/main/images/nessus_plugin_setup_01.png" style="width:50%;>
 </p>
 
 <p>
