@@ -1,190 +1,93 @@
-<h1 align="center">Install Nessus on Kali Linux</h1>
+Install Nessus on Kali Linux
+Vulnerability scanning is an essential part of modern cybersecurity. Nessus is a popular vulnerability scanner used by security professionals to identify vulnerabilities across systems, networks, and applications. It supports Windows, macOS, and Linux.
+This guide explains how to download and install Nessus on Kali Linux step by step.
 
-<p align="center">
-Step-by-step guide to install and configure Nessus Vulnerability Scanner on Kali Linux.
-</p>
+What Is Nessus
+Nessus is a vulnerability scanner developed by Tenable Inc. It is available in two main versions:
+•	Nessus Professional (paid)
+•	Nessus Essentials (free, limited to 16 IP addresses per scanner)
+Nessus provides features such as vulnerability assessment, network scanning, web scanning, asset discovery, and more, helping security professionals proactively identify and mitigate vulnerabilities.
 
-<hr>
+How to Install Nessus on Kali Linux
+Nessus does not come preinstalled on Kali Linux, but installation is straightforward.
 
-<h2>🔍 What Is Nessus</h2>
+1. Download Nessus
+Download the Nessus package for Debian from the official Nessus website. https://www.tenable.com/downloads/nessus 
+Make sure the platform is set to Linux – Debian – amd64.
+ 
 
-<p>
-Nessus is a widely used vulnerability scanner developed by
-<strong>:contentReference[oaicite:0]{index=0}</strong>.
-It helps security professionals identify vulnerabilities, misconfigurations,
-and security issues in systems, networks, and applications.
-</p>
 
-<p>
-Nessus is <strong>proprietary software</strong> and is available in:
-</p>
+2. Nessus Installation
+Once the download is complete, open a terminal and navigate to the directory where the file was downloaded (for example, Downloads). Install the .deb package using the following command:
 
-<ul>
-  <li><b>Nessus Essentials</b> (Free – limited to 16 IPs)</li>
-  <li><b>Nessus Professional</b> (Paid)</li>
-</ul>
-
-<hr>
-
-<h2>⚙️ Prerequisites</h2>
-
-<ul>
-  <li>Kali Linux (latest version recommended)</li>
-  <li>Root or <code>sudo</code> access</li>
-  <li>Internet connection</li>
-  <li>Web browser</li>
-</ul>
-
-<hr>
-
-<h2>📥 Step 1 — Download Nessus</h2>
-
-<p>
-Visit the official Nessus download page and select:
-</p>
-
-<ul>
-  <li><b>Platform:</b> Linux</li>
-  <li><b>Distribution:</b> Debian / amd64</li>
-</ul>
-
-<p>
-After downloading, open a terminal and navigate to the download directory:
-</p>
-
-<pre>
-cd ~/Downloads
-</pre>
-
-<hr>
-
-<h2>📦 Step 2 — Install Nessus</h2>
-
-<p>
-Install the downloaded package using <code>dpkg</code>:
-</p>
-
-<pre>
 sudo dpkg -i Nessus-*.deb
-</pre>
 
-<p>
-This installs Nessus in <code>/opt/nessus</code>.
-</p>
+This command installs Nessus on your system.
+ 
 
-<hr>
-
-<h2>🚀 Step 3 — Start Nessus Service</h2>
-
-<p>
-Start the Nessus daemon:
-</p>
-
-<pre>
+3. Start the Nessus Service
+Start the Nessus daemon using:
 sudo systemctl start nessusd
-</pre>
 
-<p>
-(Optional) Enable Nessus at boot:
-</p>
+ 
 
-<pre>
-sudo systemctl enable nessusd
-</pre>
+Note:
+If you have previously used Nessus and encounter a corrupted database error, stop the service, remove the Nessus directory, download the latest version, and reinstall.
 
-<p>
-Check service status:
-</p>
-
-<pre>
-sudo systemctl status nessusd
-</pre>
-
-<hr>
-
-<h2>🌐 Step 4 — Access Nessus Web Interface</h2>
-
-<p>
-Open your browser and visit:
-</p>
-
-<pre>
-https://localhost:8834/
-</pre>
-
-<p>
-You may see an SSL warning — click
-<b>Advanced → Accept the Risk and Continue</b>.
-</p>
-
-<p>
-<b>Note:</b> If accessing remotely, replace <code>localhost</code> with your system IP.
-</p>
-
-<hr>
-
-<h2>🔑 Step 5 — Initial Configuration</h2>
-
-<ol>
-  <li>Select <b>Nessus Essentials</b> (free version) or another edition</li>
-  <li>Register with your name and email to receive an activation code</li>
-  <li>Paste the activation code into the setup page</li>
-  <li>Create an admin username and password</li>
-  <li>Click <b>Skip</b> if prompted to re-register</li>
-</ol>
-
-<hr>
-
-<h2>📥 Step 6 — Plugin Download</h2>
-
-<p>
-Nessus will now download plugins and vulnerability databases.
-This may take several minutes depending on your connection.
-</p>
-
-<p>
-Once complete, you will be redirected to the Nessus dashboard.
-</p>
-
-<hr>
-
-<h2>🧭 Nessus Dashboard Overview</h2>
-
-<ul>
-  <li><b>My Scans</b> – Scans created by the current user</li>
-  <li><b>All Scans</b> – Scans created by all users</li>
-  <li><b>Policies</b> – Scan configurations and templates</li>
-  <li><b>Plugins</b> – Vulnerability detection modules</li>
-  <li><b>Scanners</b> – Hosts responsible for executing scans</li>
-  <li><b>Trash</b> – Deleted scan templates</li>
-</ul>
-
-<p>
-You can now start creating scans and exploring Nessus features.
-</p>
-
-<hr>
-
-<h2>⚠️ Troubleshooting</h2>
-
-<ul>
-  <li>
-    If Nessus fails to start, reinstall the package using the latest version.
-  </li>
-  <li>
-    <b>Clean reinstall (only if required):</b>
-    <pre>
 sudo systemctl stop nessusd
 sudo rm -rf /opt/nessus
-    </pre>
-  </li>
-  <li>
-    Ensure port <b>8834</b> is not blocked by firewall rules.
-  </li>
-</ul>
 
-<hr>
+4. Access the Web Interface
+After starting the service, go to https://kali:8834/ in your web browser to access and configure Nessus.
+A security warning will appear. Click Advanced, then select Accept the Risk and Continue.
+ 
 
-<p align="center">
-✅ Nessus is now successfully installed and ready to use on Kali Linux.
-</p>
+
+Hint:
+The word kali in the URL refers to your system hostname. If your hostname is different, replace it accordingly.
+
+5. Choose Nessus Product
+Next, you’ll be presented with a Nessus welcome screen. Click on “Continue” to move forward. 
+
+ 
+
+Select the Nessus product you want to use. For the free version, choose Nessus Essentials. 
+Select “Register for Nessus Essentials” on the following screen and click on “Continue.”
+ 
+
+6. Register and Activate
+On the next screen, provide your name and email address and click on “Register” to continue.
+
+ 
+
+On the next screen, you’ll be presented with an activation code. Copy and save this code somewhere for future reference. Click on “Continue.”
+ 
+
+On the next screen, you must create a Nessus administrator user account, which will be used to login to Nessus.
+
+ 
+
+7. Plugin Download
+Nessus will begin downloading plugins and required files. This process may take some time. Once completed, you will be redirected to the Nessus dashboard.
+ 
+
+Once finished, you’ll be taken to the Nessus dashboard.
+From here, Nessus will start configuring the plugins, which will take a while to complete. So grab a cup of coffee and relax while it works its magic.
+
+ 
+Once finished, you’re ready to use Nessus.
+
+Starting Nessus
+To start Nessus, use the command 
+sudo systemctl start nessusd.service 
+and then open https://kali:8834/ in your browser.
+ 
+
+Once you’re logged in, you can begin to use Nessus.
+
+ 
+
+Once you are finished working with Nessus, you can stop the service with the command: 
+sudo systemctl stop nessusd.service.
+
+
